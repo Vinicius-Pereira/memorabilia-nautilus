@@ -1,0 +1,166 @@
+/* General stuff */
+html {
+    background-image: url("../images/the\ end\ of\ nautilus.png");
+    height: 100%;
+}
+
+#container-game {
+    /* Center vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-score {
+    text-align: center;
+    color: #FFFFFF;
+    background-color: black;
+    border-style: solid;
+    border-color: #FFFFFF;
+    border-width: 0.1vw;
+    padding-bottom: 1vw;
+
+    font-size: 1vw;
+}
+
+#container-options {
+    margin-top: 1vw;
+}
+
+#container-middle {
+    width: 15vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.menu-buttons {
+    font-size: 1vw;
+    width: 90%;
+    margin: 0.8vw;
+    padding: 0.4vw;
+}
+
+/* Card stuff */
+.card-model {
+    width: 20vw;
+    min-height: 1em;
+    z-index: -1;
+}
+
+.card-info {
+    z-index: 0;
+}
+
+.card-image {
+    position: absolute;
+    width: 18vw;
+    z-index: -2;
+    top: 1vw;
+    left: 1vw;
+}
+
+/* Info text Card stuff */
+
+#card-1, #card-2 {
+    position: relative;
+}
+
+#number {
+    color: yellow;
+    position: absolute;
+    top: 1vw;
+    left: 1.5vw;
+    font-size: 2.3vw;
+}
+
+#artist {
+    color: yellow;
+    position: absolute;
+    top: 1vw;
+    left: 12.6vw;
+    font-size: 1.1vw;
+    text-decoration: none;
+}
+
+#title {
+    color: yellow;
+    position: absolute;
+    top: 14.5vw;
+    left: 1.7vw;
+    font-size: 1.9vw;
+}
+
+#subtitle {
+    color: yellow;
+    position: absolute;
+    top: 16.9vw;
+    left: 1.7vw;
+    font-size: 0.9vw;
+    font-style: italic;
+} 
+
+#attribute-number-1, 
+#attribute-number-2, 
+#attribute-number-3 {
+    color: yellow;
+    display: block;
+    margin-top: 1vw;
+    margin-left: 1.4vw;
+    margin-bottom: 0.8vw;
+    font-size: 1.8vw;
+}
+
+#attribute-1,
+#attribute-3 {
+    display: block;
+    margin-left: 1vw;
+    color: yellow;
+    font-size: 0.9vw;
+}
+
+#attribute-2 {
+    display: block;
+    margin-left: 0.4vw;
+    color: yellow;
+    font-size: 0.9vw;
+}
+
+#button-attribute-1,
+#IA-button-attribute-1 {
+    position: absolute;
+    bottom: 2.6vw;
+    left: 1.8vw;
+    width: 5vw;
+    height: 5vw; 
+    z-index: 2;
+    cursor: pointer;
+}
+
+#button-attribute-2,
+#IA-button-attribute-2 {
+    position: absolute;
+    bottom: 2.6vw;
+    left: 7.5vw;
+    width: 5vw;
+    height: 5vw; 
+    z-index: 2;
+    cursor: pointer;
+}
+
+#button-attribute-3,
+#IA-button-attribute-3 {
+    position: absolute;
+    bottom: 2.6vw;
+    left: 13.2vw;
+    width: 5vw;
+    height: 5vw; 
+    z-index: 2;
+    cursor: pointer;
+}
+
+#IA-button-attribute-1,
+#IA-button-attribute-2,
+#IA-button-attribute-3 {
+    cursor: default;
+}
+
