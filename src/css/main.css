@@ -305,6 +305,10 @@ footer {
     bottom: 3.3vw;
     width: 2.8vw;
     transition: 1s;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;
 }
 
 #icon-3 {
