@@ -7,10 +7,12 @@
     <script src="../src/js/game/game.js"></script>
     <script src="../src/js/spark.js"></script>
     <script src="../src/js/main.js"></script>
+    <script src="../src/js/wavy.js"></script>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/switch.css">
     <link rel="stylesheet" href="./css/icon.css">
     <link rel="stylesheet" href="./css/buttons.css">
+    <link rel="stylesheet" href="./css/scrollbar.css">
 </head>
 
 <body>
@@ -122,13 +124,13 @@
     <button id="close-credits" class="button">Jogar</button><br>
     <img id="logo-credits" src="./images/logo_placeholder.png" alt="">
     <h2>Sobre</h2>
-    <p>Memorabília são fatos e coisas dignas de memória, e aqui Memorabilia é um jogo de cartas que guarda as memórias
-        da Comunidade Nautilus, estas eternizadas pelos artistas que fazem parte da comunidade, caso no futuro ocorra o
+    <p><span class="memorabilia">Memorabília</span> são fatos e coisas dignas de memória, e aqui <span class="memorabilia">Memorabília</span> é um jogo de cartas que guarda as memórias
+        da <span class="nautilus">Comunidade Nautilus</span>, estas eternizadas pelos artistas que fazem parte da comunidade, caso no futuro ocorra o
         temido
-        <span>FIM DO NAUTILUS</span>.
+        <span id="fim-do-nautilus">FIM DO NAUTILUS</span>.
     </p>
     <p>
-        Não só um jogo de cartas feito para uma Não GameJam, Memorabília é um projeto que será mantido no futuro com
+        Não só um jogo de cartas feito para uma Não GameJam, <span class="memorabilia">Memorabília</span> é um projeto que será mantido no futuro com
         atualizações de novas memórias, sempre que a comunidade e seus artistas assim desejarem. Caso você queira contribuir
         com o projeto através de uma cartinha, entre em contato com um dos Organizadores do projeto, listados logo abaixo.
     </p>
@@ -146,22 +148,33 @@
     <h2>Créditos</h2>
     <h3>Organização</h3>
     <ul>
-        <li>Saito <a href="https://www.instagram.com/saito.art/" target="_blank">Instagram</a></li>
-        <li>Túlio Lobo <a href="https://bsky.app/profile/tuliolobo.com.br" target="_blank">Bluesky</a></li>
-        <li>Vinicius S Pereira <a href="https://bsky.app/profile/viniciusp.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a></li>
+        <li>Saito <a href="https://www.instagram.com/saito.art/" target="_blank"><img class="credits-icon" src="./images/icon-instagram.png" alt="Instagram"></a></li>
+        <li>Túlio Lobo <a href="https://bsky.app/profile/tuliolobo.com.br" target="_blank"><img class="credits-icon" src="./images/icon-bsky.png" alt="Bluesky"></a></li>
+        <li>Vinicius S Pereira <a href="https://bsky.app/profile/viniciusp.bsky.social" target="_blank" rel="noopener noreferrer"><img class="credits-icon" src="./images/icon-bsky.png" alt="Bluesky"></a></li>
     </ul>
     <h3>Direção de Arte</h3>
     <ul>
-        <li>Saito <a href="https://www.instagram.com/saito.art/" target="_blank">Instagram</a></li>
+        <li>Saito <a href="https://www.instagram.com/saito.art/" target="_blank"><img class="credits-icon" src="./images/icon-instagram.png" alt="Instagram"></a></li>
     </ul>
     <h3>Artistas</h3>
     <ul>
-        <li>Saito <a href="https://www.instagram.com/saito.art/" target="_blank">Instagram</a></li>
-        <li>Kör Rodrigues <a href="https://cara.app/korrodrigues" target="_blank">Cara</a></li>
+        <li>Amil <a href="https://bsky.app/profile/a10aocubo.bsky.social" target="_blank"><img class="credits-icon" src="./images/icon-bsky.png" alt="Bluesky"></a></li>
+        <li>Andrézin <a href="https://linkedin.com/in/andré-morais-923190297" target="_blank"><img class="credits-icon" src="./images/icon-linkdn.png" alt="Linkedin"></a></li>
+        <li>Didas <a href="https://bsky.app/profile/didigameboy.bsky.social" target="_blank"><img class="credits-icon" src="./images/icon-bsky.png" alt="Bluesky"></a></li>
+        <li>Kaue <a href="https://bsky.app/profile/red223.bsky.social" target="_blank"><img class="credits-icon" src="./images/icon-bsky.png" alt="Bluesky"></a></li>
+        <li>Kerberos <a href="https://www.instagram.com/kerberos.2d/" target="_blank"><img class="credits-icon" src="./images/icon-instagram.png" alt="Instagram"></a></li>
+        <li>Kitilto <a href="https://www.instagram.com/kitilto/" target="_blank"><img class="credits-icon" src="./images/icon-instagram.png" alt="Instagram"></a></li>
+        <li>Kör Rodrigues <a href="https://cara.app/korrodrigues" target="_blank"><img class="credits-icon" src="./images/icon-cara.png" alt="Cara"></a></li>
+        <li>Paulo Maciel <a href="https://www.instagram.com/ricksfantasyworlds/" target="_blank"><img class="credits-icon" src="./images/icon-instagram.png" alt="Instagram"></a></li>
+        <li>Saito <a href="https://www.instagram.com/saito.art/" target="_blank"><img class="credits-icon" src="./images/icon-instagram.png" alt="Instagram"></a></li>
+        <li>Soivin <a href="https://www.youtube.com/soivin" target="_blank"><img class="credits-icon" src="./images/icon-youtube.png" alt="Youtube"></a></li>
+        <li>Túlio Lobo <a href="https://bsky.app/profile/tuliolobo.com.br" target="_blank"><img class="credits-icon" src="./images/icon-bsky.png" alt="Bluesky"></a></li>
+        <li>Tzus <a href="https://bsky.app/profile/tzus.bsky.social" target="_blank"><img class="credits-icon" src="./images/icon-bsky.png" alt="Bluesky"></a></li>
+        <li>Valkyray <a href="https://www.instagram.com/valkyrieray/" target="_blank"><img class="credits-icon" src="./images/icon-instagram.png" alt="Instagram"></a></li>
     </ul>
     <h3>Programação</h3>
     <ul>
-        <li>Vinicius S Pereira <a href="https://bsky.app/profile/viniciusp.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a></li>
+        <li>Vinicius S Pereira <a href="https://bsky.app/profile/viniciusp.bsky.social" target="_blank" rel="noopener noreferrer"><img class="credits-icon" src="./images/icon-bsky.png" alt="Bluesky"></a></li>
     </ul>
     <h3>Agradecimentos</h3>
     <ul>

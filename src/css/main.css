@@ -5,7 +5,7 @@
     font-style: normal;
     font-weight: bold;
     font-stretch: condensed;
-    src:url("../fonts/BAHNSCHRIFT.TTF");
+    src: url("../fonts/BAHNSCHRIFT.TTF");
 }
 
 @font-face {
@@ -13,11 +13,12 @@
     font-style: normal;
     font-weight: lighter;
     font-stretch: condensed;
-    src:url("../fonts/BAHNSCHRIFT.TTF");
+    src: url("../fonts/BAHNSCHRIFT.TTF");
 }
 
 html {
-    background-image: url("../images/the\ end\ of\ nautilus.png");
+    background-image: url("../images/bg1.jpg");
+    background-size: cover;
     height: 100%;
     font-family: "BAHNSCHRIFT";
     user-select: none;
@@ -43,17 +44,63 @@ footer {
 #logo-credits {
     width: 30vw;
 }
+
 #credits-dialog {
-    background-image: url("../images/bg-texture.png");
+    background-image: url("../images/bg1-gray.png");
     background-size: cover;
     /* background-color: #a1a3a8; */
     border: .2vw solid #202020;
     font-size: 1.45vw;
     color: #FFFFFF;
-    width: 60vw;
+    width: 70vw;
     height: 40vw;
     text-align: center;
     font-family: 'BAHNSCHRIFT Light';
+}
+
+.wavy {
+    font-family: 'BAHNSCHRIFT';
+    animation-name: wavy;
+    animation-duration: 1.3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+@keyframes wavy {
+    0% {
+        color: #e40606;
+        top: 0vw;
+    }
+
+    50% {
+        color: #a10404;
+        top: -.4vw;
+    }
+
+    100% {
+        color: #7c0707;
+        top: 0vw;
+    }
+}
+
+.memorabilia {
+    font-family: 'BAHNSCHRIFT';
+    color: #327fdd;
+}
+
+.nautilus {
+    color: #f192a8;
+}
+
+.credits-icon {
+    width: 1.2vw;
+}
+
+#credits-dialog::backdrop {
+    background-color: rgba(15, 15, 15, 0.61);
 }
 
 #credits-dialog p {
@@ -65,13 +112,13 @@ footer {
     color: #fdca61;
 }
 
-#credits-dialog h2{
+#credits-dialog h2 {
     color: #e54545;
     margin-top: 1vw;
     margin-bottom: .7vw;
 }
 
-#credits-dialog h3{
+#credits-dialog h3 {
     color: #e54545;
     margin-bottom: .5vw;
 }
@@ -93,7 +140,7 @@ footer {
     align-items: center;
 }
 
-#logo{
+#logo {
     width: 40vw;
 }
 
@@ -142,6 +189,7 @@ footer {
     width: 20vw;
     min-height: 1em;
     z-index: -1;
+    box-shadow: 2px solid black;
 }
 
 .card-info {
@@ -157,7 +205,8 @@ footer {
 }
 
 .card-front,
-.card-back{
+.card-back,
+.card-background {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -168,12 +217,8 @@ footer {
     z-index: 0;
 }
 
-.card-front{
+.card-front {
     transform: rotateY(180deg);
-}
-
-.card-bottom{
-    
 }
 
 /* Info text Card stuff */
@@ -184,6 +229,7 @@ footer {
     transition: transform 1s ease;
     height: 28vw;
     width: 20vw;
+    box-shadow: 0vw 0.4vw 0.5vw #202020;
 }
 
 #artist {
@@ -242,10 +288,10 @@ footer {
     left: 1.7vw;
     font-size: 0.9vw;
     font-style: italic;
-} 
+}
 
-#attribute-number-1, 
-#attribute-number-2, 
+#attribute-number-1,
+#attribute-number-2,
 #attribute-number-3 {
     color: yellow;
     display: block;
@@ -256,8 +302,8 @@ footer {
     font-stretch: ultra-condensed !important;
     color: #000000;
     text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
-             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
-    
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+
 }
 
 #attribute-number-1 {
@@ -296,7 +342,7 @@ footer {
     bottom: 2.6vw;
     left: 1.8vw;
     width: 5vw;
-    height: 5vw; 
+    height: 5vw;
     z-index: 2;
     cursor: pointer;
 }
@@ -307,7 +353,7 @@ footer {
     bottom: 2.6vw;
     left: 7.5vw;
     width: 5vw;
-    height: 5vw; 
+    height: 5vw;
     z-index: 2;
     cursor: pointer;
 }
@@ -318,7 +364,7 @@ footer {
     bottom: 2.6vw;
     left: 13.2vw;
     width: 5vw;
-    height: 5vw; 
+    height: 5vw;
     z-index: 2;
     cursor: pointer;
 }
@@ -328,4 +374,3 @@ footer {
 #IA-button-attribute-3 {
     cursor: default;
 }
-

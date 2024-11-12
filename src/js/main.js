@@ -6,4 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("close-credits").addEventListener("click", () => {
         document.getElementById("credits-dialog").close();
     });
+
+    document.getElementById("credits-dialog").showModal();
+
 });
