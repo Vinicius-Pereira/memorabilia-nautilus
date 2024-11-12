@@ -1,11 +1,41 @@
 /* General stuff */
+
+@font-face {
+    font-family: "BAHNSCHRIFT";
+    font-style: normal;
+    font-weight: bold;
+    font-stretch: condensed;
+    src:url("../fonts/BAHNSCHRIFT.TTF");
+}
+
 html {
     background-image: url("../images/the\ end\ of\ nautilus.png");
     height: 100%;
 }
 
+footer {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vw;
+    font-size: 1vw;
+}
+
+#credits-dialog {
+    width: 30vw;
+}
+
+#container-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    width: 40vw;
+}
+
 #container-game {
-    /* Center vertically and horizontally */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,10 +89,34 @@ html {
     left: 1vw;
 }
 
+.card-front,
+.card-back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    z-index: 0;
+}
+
+.card-front{
+    transform: rotateY(180deg);
+}
+
+.card-bottom{
+    
+}
+
 /* Info text Card stuff */
 
 #card-1, #card-2 {
     position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+    height: 28vw;
+    width: 20vw;
 }
 
 #number {
@@ -81,6 +135,38 @@ html {
     font-size: 1.1vw;
     text-decoration: none;
 }
+
+.icon-attribute {
+    position: absolute;
+    z-index: -1;
+    width: 4.7vw;
+}
+
+#icon-1 {
+    left: -.2vw;
+    bottom: .2vw;
+    width: 4.7vw;
+}
+
+#icon-2 {
+    left: .2vw;
+    bottom: .3vw;
+    width: 4.9vw;
+}
+
+#icon-2-brain {
+    left: 1.26vw;
+    bottom: 3.3vw;
+    width: 2.8vw;
+    transition: 1s;
+}
+
+#icon-3 {
+    left: .5vw;
+    bottom: .3vw;
+    width: 4.9vw;
+}
+
 
 #title {
     color: yellow;
@@ -104,10 +190,30 @@ html {
 #attribute-number-3 {
     color: yellow;
     display: block;
-    margin-top: 1vw;
-    margin-left: 1.4vw;
     margin-bottom: 0.8vw;
-    font-size: 1.8vw;
+    font-size: 2.5vw;
+    font-family: "Bahnschrift";
+    font-weight: 600;
+    font-stretch: ultra-condensed !important;
+    color: #000000;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    
+}
+
+#attribute-number-1 {
+    margin-left: 1.2vw;
+    padding-top: 0.9vw;
+}
+
+#attribute-number-2 {
+    margin-left: 1.70vw;
+    margin-top: 0.9vw;
+}
+
+#attribute-number-3 {
+    margin-left: 2vw;
+    margin-top: 0.9vw;
 }
 
 #attribute-1,

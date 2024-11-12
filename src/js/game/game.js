@@ -1,40 +1,43 @@
 var enable = true;
-$(document).ready(function () {
-    var buttons = [ $("#card-1 #button-attribute-1"), $("#card-1 #button-attribute-2"), $("#card-1 #button-attribute-3")]
-    buttons.forEach((button) =>{
-        button.on("click", battle);
+var cartasVerso = [true, true];
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("button-attribute-1").addEventListener("click", battle);
+    document.getElementById("button-attribute-2").addEventListener("click", battle);
+    document.getElementById("button-attribute-3").addEventListener("click", battle);
+    document.getElementById("next-round").addEventListener("click", proximaRodada);
+    document.getElementById("new-game").addEventListener("click", novoJogo);
+    document.getElementById("get-card").addEventListener("click", function () { 
+        this.disabled = true;
+        virarCarta(document.getElementById("card-1"), cartasVerso.jogador);
     });
-    $("#next-round").on("click", proximaRodada);
-    $("#new-game").on("click", novoJogo);
-    
+    document.getElementById("new-game").disabled = true;
+    document.getElementById("next-round").disabled = true;
 });
 
 function battle(event) {
     var index = event.target.id.charAt(event.target.id.length - 1);
     var valor = cartasJogador[indexAtual].atributos[index-1];
-    // To Do IA - Flávio
-    var valorIA = cartasIA[indexAtual].atributos[index-1];
-    var valorIA = botIA();
+    var valorIA = botIA(index-1);
     if(valor > valorIA) {
         jogadorTags.score.text(++contVitoriaJogador);
     } else if(valor < valorIA) {
         IATags.score.text(++contVitoriaIA);
     }
-
-    console.log("Jogador:" + valor);
-    console.log("Bot:" + valorIA);
+    document.getElementById("next-round").disabled = false;
 
     indexAtual++;
     if(indexAtual >= cartasJogador.length) {
-        $("#next-round").attr("disable", true);
+        document.getElementById("new-game").disabled = false;
+        document.getElementById("next-round").disabled = true;
         if(contVitoriaJogador > contVitoriaIA) {
-            $("#result").text("Você venceu!");
+            resultado.textContent = "Você venceu!"
         } else if(contVitoriaJogador < contVitoriaIA) {
-            $("#result").text("O Bot venceu!");
+            resultado.textContent = "O Bot venceu!";
         } else {
-            $("#result").text("Empate!");
+            resultado.textContent = "Empate!";
         }
     }
+    virarCarta(document.getElementById("card-2"));
     toogleButton();
 }
 
@@ -43,11 +46,22 @@ function proximaRodada() {
         montaCarta(jogadorTags, cartasJogador[indexAtual]);
         montaCarta(IATags, cartasIA[indexAtual]);
     }
+    document.getElementById("next-round").disabled = true;
+    document.getElementById("get-card").disabled = false;
+    virarCarta(document.getElementById("card-1"));
+    virarCarta(document.getElementById("card-2"));
     toogleButton();
 }
 
-function virarCarta() {
-    // Virar a carta - CRÍTICO AO FUNCIONAMENTO DO JOGO
+function virarCarta(element) {
+    var index = element.id.charAt(element.id.length - 1);
+    if(cartasVerso[index-1]) {
+        element.style.transform = "perspective(400px) rotateY(180deg)";
+        cartasVerso[index-1] = !cartasVerso[index-1];
+    } else {
+        element.style.transform = "none";
+        cartasVerso[index-1] = !cartasVerso[index-1];
+    }
 }
 
 function toogleButton() {
@@ -64,14 +78,21 @@ function toogleButton() {
     enable = !enable;
 }
 
-function botIA() {
-    let atributos = cartasIA[indexAtual].atributos;
-    let indexRandom = Math.floor(Math.random() * 3);
-    return atributos[indexRandom];
+function botIA(index) {
+    var atributos = cartasIA[indexAtual].atributos;
+    if(dificuldade.checked) {
+        let indexRandom = Math.floor(Math.random() * 3);
+        return atributos[indexRandom];
+    } else {
+        return atributos[index];
+    }
 }
 
 function novoJogo() {
-    // Esconder Cartas
+    document.getElementById("get-card").disabled = false;
+    console.log(cartasVerso);
+    virarCarta(document.getElementById("card-1"));
+    virarCarta(document.getElementById("card-2"));
     contVitoriaJogador = contVitoriaIA = 0;
     indexAtual = 0;
 
@@ -85,6 +106,8 @@ function novoJogo() {
     montaCarta(jogadorTags, cartasJogador[indexAtual]);
     montaCarta(IATags, cartasIA[indexAtual]);
     toogleButton();
+    
+    document.getElementById("new-game").disabled = true;
 }
 
 

@@ -1,93 +1,131 @@
 <html>
-    <head>
-        <title>Memorabília - Nautilus</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="../src/js/game/input.js"></script>
-        <script src="../src/js/game/game.js"></script>
-        <link rel="stylesheet" href="./css/main.css">
-        Memorabilia Nautilus
-    </head>
-    
-    <body>
-        <div id="container-game">
-            <div id="card-1" class="card">
-                <img class="card-model" src="./images/cards/carta trunfo nautilus.png" alt="Carta Placeholder">
-                <img class="card-image" src="./images/cards/comunidade é importante_by @soivin.png" alt="">
+
+<head>
+    <title>Memorabília - Nautilus</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../src/js/game/input.js"></script>
+    <script src="../src/js/game/game.js"></script>
+    <script src="../src/js/spark.js"></script>
+    <script src="../src/js/main.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/switch.css">
+    <link rel="stylesheet" href="./css/icon.css">
+    Memorabilia Nautilus
+</head>
+
+<body>
+    <div id="container-logo">
+        <div>
+            <img id="logo" src="./images/logo_placeholder.png" alt="">
+        </div>
+    </div>
+    <div id="container-game">
+        <div id="card-1" class="card">
+            <div class="card-front">
+                <img id="card-model-1" class="card-model" src="./images/cards/carta trunfo nautilus.png"
+                    alt="Carta Placeholder">
                 <div id="card-top" class="card-info">
-                    <span id="number">00</span>
                     <a href="" target="_blank" id="artist">@artista</a>
                 </div>
-                <div id="card-title" class="card-info">
-                    <span id="title">nome da carta</span>
-                    <span id="subtitle">piadinha sobre a carta</span>
-                </div>
                 <div id="card-bottom">
-                    <div id="button-attribute-1">
-                        <span id="attribute-number-1">99</span>
-                        <span id="attribute-1">lacração</span>
+                    <div id="container-technical-glitter">
+                        <div id="button-attribute-1">
+                            <img id="icon-1" class="icon-attribute" src="./images/cards/icon_lacracao.png" alt="">
+                            <span id="attribute-number-1">99</span>
+                        </div>
                     </div>
                     <div id="button-attribute-2">
+                        <img id="icon-2" class="icon-attribute" src="./images/cards/icon_nerdolagem.png" alt="">
+                        <img id="icon-2-brain" class="icon-attribute" src="./images/cards/icon_nerdolagem_brain.png"
+                            alt="">
                         <span id="attribute-number-2">99</span>
-                        <span id="attribute-2">nerdolagem</span>
                     </div>
                     <div id="button-attribute-3">
+                        <img id="icon-3" class="icon-attribute" src="./images/cards/icon_aura.png" alt="">
                         <span id="attribute-number-3">99</span>
-                        <span id="attribute-3">a definir</span>
                     </div>
                 </div>
             </div>
-            <div id="container-middle">
-                <div id="container-score">
-                    <h3>Pontuação Atual</h3>
-                    <span>Jogador </span>
-                    <span id="score-player">0</span>
-                    <span>X</span>
-                    <span id="score-IA">0</span>
-                    <span> Bot</span>
-                    <h3 id="result"></h3>
-                </div>
-                <div id="container-options">
-                    <button class="menu-buttons">
-                        Sortear Carta
-                    </button>
-                    <button id="next-round" class="menu-buttons">
-                        Próxima Rodada
-                    </button>
-                    <button id="new-game" class="menu-buttons">
-                        Recomeçar Jogo
-                    </button>
-                </div>
+            <div class="card-back">
+                <img class="card-model" src="./images/cards/carta_verso.png" alt="Verso Memorabilia">
             </div>
+        </div>
+        <div id="container-middle">
+            <div id="container-score">
+                <h3>Pontuação Atual</h3>
+                <span>Jogador </span>
+                <span id="score-player">0</span>
+                <span>X</span>
+                <span id="score-IA">0</span>
+                <span> Bot</span>
+                <h3 id="result"></h3>
+            </div>
+            <div id="container-options">
+                <button id="get-card" class="menu-buttons">
+                    Sortear Carta
+                </button>
+                <button id="next-round" class="menu-buttons">
+                    Próxima Rodada
+                </button>
+                <button id="new-game" class="menu-buttons">
+                    Novo Jogo
+                </button>
+                <label for="dificuldade" class="switch" aria-label="Toggle Filter">
+                    <input type="checkbox" id="dificuldade" />
+                    <span>Clássico</span>
+                    <span>Difícil</span>
+                </label>
+            </div>
+        </div>
+
+        <div id="container-game">
             <div id="card-2" class="card">
-                <img class="card-model" src="./images/cards/carta trunfo nautilus.png" alt="Carta Placeholder">
-                <img class="card-image" src="./images/cards/comunidade é importante_by @soivin.png" alt="">
-                <div id="card-top" class="card-info">
-                    <span id="number">00</span>
-                    <a href="" target="_blank" id="artist">@artista</a>
+                <div class="card-front">
+                    <img id="card-model-2" class="card-model" src="./images/cards/carta trunfo nautilus.png"
+                        alt="Carta Placeholder">
+                    <div id="card-top" class="card-info">
+                        <a href="" target="_blank" id="artist">@artista</a>
+                    </div>
+                    <div id="card-bottom">
+                        <div id="IA-button-attribute-1">
+                            <img id="icon-1" class="icon-attribute" src="./images/cards/icon_lacracao.png" alt="">
+                            <span id="attribute-number-1">99</span>
+                        </div>
+                        <div id="IA-button-attribute-2">
+                            <img id="icon-2" class="icon-attribute" src="./images/cards/icon_nerdolagem.png" alt="">
+                            <img id="icon-2-brain" class="icon-attribute" src="./images/cards/icon_nerdolagem_brain.png"
+                                alt="">
+                            <span id="attribute-number-2">99</span>
+                        </div>
+                        <div id="IA-button-attribute-3">
+                            <img id="icon-3" class="icon-attribute" src="./images/cards/icon_aura.png" alt="">
+                            <span id="attribute-number-3">99</span>
+                        </div>
+                    </div>
                 </div>
-                <div id="card-title" class="card-info">
-                    <span id="title">nome da carta</span>
-                    <span id="subtitle">piadinha sobre a carta</span>
-                </div>
-                <div id="card-bottom">
-                    <div id="IA-button-attribute-1">
-                        <span id="attribute-number-1">99</span>
-                        <span id="attribute-1">lacração</span>
-                    </div>
-                    <div id="IA-button-attribute-2">
-                        <span id="attribute-number-2">99</span>
-                        <span id="attribute-2">nerdolagem</span>
-                    </div>
-                    <div id="IA-button-attribute-3">
-                        <span id="attribute-number-3">99</span>
-                        <span id="attribute-3">a definir</span>
-                    </div>
+                <div class="card-back">
+                    <img class="card-model" src="./images/cards/carta_verso.png" alt="Verso Memorabilia">
                 </div>
             </div>
         </div>
-    </body>
+</body>
 
-    <footer>
+<!-- <footer>
+    <button id="button-credits">Créditos</button>
+</footer> -->
 
-    </footer>
+<dialog id="credits-dialog">
+    <button id="close-credits">Fechar</button>
+    <h2>Créditos</h2>
+    <h3>Programação</h3>
+    <p>Vinicius1942 <a href="https://bsky.app/profile/viniciusp.bsky.social" target="_blank"
+            rel="noopener noreferrer">Bluesky</a></p>
+    <h3>Direção de Arte</h3>
+    <p>Túlio Lobo <a href="https://bsky.app/profile/tuliolobo.com.br" target="_blank"
+            rel="noopener noreferrer">Bluesky</a></p>
+    <p>Saito <a href="https://www.instagram.com/saito.art/" target="_blank" rel="noopener noreferrer">Bluesky</a></p>
+    <h3>Artistas de Cartas</h3>
+    <p>Kör Rodrigues <a href="https://cara.app/korrodrigues" target="_blank" rel="noopener noreferrer">Cara</a></p>
+</dialog>
+
 </html>
