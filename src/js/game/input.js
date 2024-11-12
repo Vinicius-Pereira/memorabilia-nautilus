@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     cartasJogador = loadCards();
     cartasIA = loadCards();
 
+    resultado.textContent = (cartasJogador.length - indexAtual) + " cartas restantes";
     shuffle(cartasJogador);
     shuffle(cartasIA);
     

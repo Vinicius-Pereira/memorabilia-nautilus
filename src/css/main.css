@@ -153,18 +153,37 @@ footer {
 #container-score {
     text-align: center;
     color: #FFFFFF;
-    background-color: black;
+    background-color: #202020;
+    box-shadow: 0 0 0 .1vw #202020, 0 .3vw 0 #202020;
     border-style: solid;
     border-color: #FFFFFF;
-    border-width: 0.1vw;
-    padding-bottom: 1vw;
-    min-height: 8vw;
+    border-width: 0.2vw;
+    min-height: 3vw;
+    font-size: 1.5vw;
+}
 
-    font-size: 1vw;
+#container-points {
+    padding-top: .5vw;
+    padding-bottom: .5vw;
+    background-color: #a0a2a8;
+    /* background-image: url("../images/bg1-gray.png"); */
+    background-size: cover;
+    border-bottom: 0.2vw solid #FFFFFF;
+}
+
+#score-player,
+#score-IA {
+    color: #327fdd;
+}
+
+#container-cards-left {
+    padding-top: 0.3vw;
+    padding-bottom: 0.1vw;
 }
 
 #result {
-    margin-bottom: 0;
+    font-size: 1.2vw;
+    color: #dc4b6e;
 }
 
 #container-options {
@@ -172,7 +191,7 @@ footer {
 }
 
 #container-middle {
-    width: 15vw;
+    width: 20vw;
     margin-left: 1vw;
     margin-right: 1vw;
 }

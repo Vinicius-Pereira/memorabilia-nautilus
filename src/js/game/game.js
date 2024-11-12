@@ -19,6 +19,8 @@ function battle(event) {
     var valor = cartasJogador[indexAtual].atributos[index-1];
     var valorIA = botIA(index-1);
 
+    indexAtual++;
+    resultado.textContent = (cartasJogador.length - indexAtual) + " cartas restantes";
     if(valor > valorIA) {
         document.querySelector("#card-1 #attribute-number-"+index).style.color = "#40cc54";
         document.querySelector("#card-2 #attribute-number-"+index).style.color = "#cc4040";
@@ -34,14 +36,13 @@ function battle(event) {
     document.getElementById("next-round").disabled = false;
     jogadorTags.atributo1.attr("disabled", true);
 
-    indexAtual++;
     if(indexAtual >= cartasJogador.length) {
         document.getElementById("new-game").disabled = false;
         document.getElementById("next-round").disabled = true;
         if(contVitoriaJogador > contVitoriaIA) {
             resultado.textContent = "Você venceu!"
         } else if(contVitoriaJogador < contVitoriaIA) {
-            resultado.textContent = "O Bot venceu!";
+            resultado.textContent = "O Computador venceu!";
         } else {
             resultado.textContent = "Empate!";
         }
@@ -109,15 +110,14 @@ function botIA(index) {
 
 function novoJogo() {
     document.getElementById("get-card").disabled = false;
-    console.log(cartasVerso);
     virarCarta(document.getElementById("card-1"));
     virarCarta(document.getElementById("card-2"));
     contVitoriaJogador = contVitoriaIA = 0;
     indexAtual = 0;
 
+    resultado.textContent = (cartasJogador.length - indexAtual) + " cartas restantes";
     jogadorTags.score.text(contVitoriaJogador);
     IATags.score.text(contVitoriaIA);
-    $("#result").text("");
     $("#next-round").attr("disable", false);
 
     shuffle(cartasJogador);

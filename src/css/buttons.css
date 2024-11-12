@@ -1,8 +1,15 @@
-/* From Uiverse.io by TanimMahbub */
+@font-face {
+    font-family: "BAHNSCHRIFT";
+    font-style: normal;
+    font-weight: bold;
+    font-stretch: condensed;
+    src: url("../fonts/BAHNSCHRIFT.TTF");
+}
+
 .button {
     /* typography */
-    font-size: 1vw;
-
+    font-size: 1.2vw;
+    font-family: "BAHNSCHRIFT";
     /* ui */
     border: none;
     cursor: pointer;
