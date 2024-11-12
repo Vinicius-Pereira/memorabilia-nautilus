@@ -244,13 +244,15 @@ footer {
 }
 
 .card-front,
-.card-back,
-.card-background {
+.card-back {
     position: absolute;
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
 }
+
+
 
 .card-front {
     z-index: 0;
@@ -412,4 +414,13 @@ footer {
 #IA-button-attribute-2,
 #IA-button-attribute-3 {
     cursor: default;
+}
+
+@-moz-document url-prefix() {
+    .card-front {
+        transform: rotateY(180deg);
+    }
+    .card-back {
+        transform: rotateX(0deg);
+    }
 }

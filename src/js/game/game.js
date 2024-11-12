@@ -115,16 +115,18 @@ function novoJogo() {
     contVitoriaJogador = contVitoriaIA = 0;
     indexAtual = 0;
 
-    resultado.textContent = (cartasJogador.length - indexAtual) + " cartas restantes";
-    jogadorTags.score.text(contVitoriaJogador);
-    IATags.score.text(contVitoriaIA);
-    $("#next-round").attr("disable", false);
-
-    shuffle(cartasJogador);
-    shuffle(cartasIA);
-    montaCarta(jogadorTags, cartasJogador[indexAtual]);
-    montaCarta(IATags, cartasIA[indexAtual]);
-    toogleButton();
+    setTimeout(function(){
+        resultado.textContent = (cartasJogador.length - indexAtual) + " cartas restantes";
+        jogadorTags.score.text(contVitoriaJogador);
+        IATags.score.text(contVitoriaIA);
+        $("#next-round").attr("disable", false);
+    
+        shuffle(cartasJogador);
+        shuffle(cartasIA);
+        montaCarta(jogadorTags, cartasJogador[indexAtual]);
+        montaCarta(IATags, cartasIA[indexAtual]);
+        toogleButton();
+    }, 500);
     
     document.getElementById("new-game").disabled = true;
 }
