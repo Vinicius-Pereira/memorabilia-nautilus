@@ -47,20 +47,76 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function loadCards() {
     let basePath = "./images/cards/";
-    return [{
-        url: basePath + "carta_placeholder.png",
-        artista: ["@soivin.png", "https://www.youtube.com/@Soivin"],
-        atributos: ["30", "40", "50"]
+    return [
+    // {
+    //     url: basePath + "1.png",
+    //     artista: ["soivin", "https://www.youtube.com/@Soivin"],
+    //     atributos: ["33", "15", "80"]
+    // }, 
+    {
+        url: basePath + "2.png",
+        artista: ["soivin", "https://www.youtube.com/@Soivin"],
+        atributos: ["13", "20", "95"]
     }, 
     {
-        url: basePath + "carta_placeholder.png",
-        artista: ["@soivin.png", "https://www.youtube.com/@Soivin"],
-        atributos: ["99", "99", "99"]
+        url: basePath + "3.png",
+        artista: ["Valkyray", "https://www.instagram.com/valkyrieray/"],
+        atributos: ["10", "75", "55"]
     },
     {
-        url: basePath + "carta_placeholder.png",
-        artista: ["@soivin.png", "https://www.youtube.com/@Soivin"],
-        atributos: ["12", "25", "52"]
+        url: basePath + "4.png",
+        artista: ["Amil", "https://bsky.app/profile/a10aocubo.bsky.social"],
+        atributos: ["79", "50", "23"]
+    },
+    {
+        url: basePath + "5.png",
+        artista: ["Kör Rodrigues", "https://cara.app/korrodrigues"],
+        atributos: ["45", "35", "90"]
+    },
+    {
+        url: basePath + "6.png",
+        artista: ["Tzus", "https://bsky.app/profile/tzus.bsky.social"],
+        atributos: ["07", "05", "66"]
+    },
+    {
+        url: basePath + "7.png",
+        artista: ["Kerberos", "https://www.instagram.com/kerberos.2d/"],
+        atributos: ["81", "42", "56"]
+    },
+    {
+        url: basePath + "8.png",
+        artista: ["Kitilto", "https://www.instagram.com/kitilto/"],
+        atributos: ["78", "24", "26"]
+    },
+    {
+        url: basePath + "9.png",
+        artista: ["Andrézin", "https://www.linkedin.com/in/andr%C3%A9-morais-923190297"],
+        atributos: ["03", "17", "28"]
+    },
+    {
+        url: basePath + "10.png",
+        artista: ["Kitilto", "https://www.instagram.com/kitilto/"],
+        atributos: ["09", "68", "47"]
+    },
+    {
+        url: basePath + "11.png",
+        artista: ["Kör Rodrigues", "https://cara.app/korrodrigues"],
+        atributos: ["13", "22", "83"]
+    },
+    {
+        url: basePath + "12.png",
+        artista: ["Paulo Maciel", "https://www.instagram.com/ricksfantasyworlds/"],
+        atributos: ["54", "69", "82"]
+    },
+    {
+        url: basePath + "13.png",
+        artista: ["Kitilto", "https://www.instagram.com/kitilto/"],
+        atributos: ["10", "03", "99"]
+    },
+    {
+        url: basePath + "14.png",
+        artista: ["Didas", "https://bsky.app/profile/didigameboy.bsky.social"],
+        atributos: ["43", "67", "54"]
     }]
 }
 
