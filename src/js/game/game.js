@@ -32,6 +32,7 @@ function battle(event) {
         document.querySelector("#card-2 #attribute-number-"+index).style.color = "#cc4040";
     }
     document.getElementById("next-round").disabled = false;
+    jogadorTags.atributo1.attr("disabled", true);
 
     indexAtual++;
     if(indexAtual >= cartasJogador.length) {
@@ -60,7 +61,7 @@ function proximaRodada() {
         document.getElementById("next-round").disabled = true;
         document.getElementById("get-card").disabled = false;
         toogleButton();
-    }, 1000);
+    }, 500);
 }
 
 function virarCarta(element) {
@@ -83,15 +84,17 @@ function virarCarta(element) {
 function toogleButton() {
     var buttons = [ $("#card-1 #button-attribute-1"), $("#card-1 #button-attribute-2"), $("#card-1 #button-attribute-3")]
     if(enable) {
-        buttons.forEach((button) =>{
-            button.off("click", battle);
-        });
+        document.getElementById("button-attribute-1").removeEventListener("click", battle);
+        document.getElementById("button-attribute-2").removeEventListener("click", battle);
+        document.getElementById("button-attribute-3").removeEventListener("click", battle);
+        enable = !enable;
     } else {
-        buttons.forEach((button) =>{
-            button.on("click", battle);
-        });
+        console.log("cria")
+        document.getElementById("button-attribute-1").addEventListener("click", battle);
+        document.getElementById("button-attribute-2").addEventListener("click", battle);
+        document.getElementById("button-attribute-3").addEventListener("click", battle);
+        enable = !enable;
     }
-    enable = !enable;
 }
 
 function botIA(index) {

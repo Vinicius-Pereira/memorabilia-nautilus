@@ -25,3 +25,9 @@
     box-shadow: 0 0 0 .1vw #202020, 0 .2vw 0 #202020;
     transform: translateY(0.15vw);
 }
+
+.button:disabled {
+    background: #202020;
+    box-shadow: 0 0 0 .1vw #202020, 0 .2vw 0 #202020;
+    transform: translateY(.3vw);
+}

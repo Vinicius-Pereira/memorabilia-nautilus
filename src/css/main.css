@@ -111,8 +111,13 @@ footer {
     border-color: #FFFFFF;
     border-width: 0.1vw;
     padding-bottom: 1vw;
+    min-height: 8vw;
 
     font-size: 1vw;
+}
+
+#result {
+    margin-bottom: 0;
 }
 
 #container-options {
