@@ -1,0 +1,27 @@
+/* From Uiverse.io by TanimMahbub */
+.button {
+    /* typography */
+    font-size: 1vw;
+
+    /* ui */
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: .8vw 1.5vw;
+    border-radius: .2vw;
+    background: #a0a2a8;
+    color: #fff;
+    box-shadow: 0 0 0 .1vw #202020, 0 .3vw 0 #202020;
+    transition: all 0.1s ease, background 0.3s ease;
+}
+
+/* ux */
+.button:hover,
+.button:focus {
+    background: #a0a2a8;
+}
+
+.button:active {
+    box-shadow: 0 0 0 .1vw #202020, 0 .2vw 0 #202020;
+    transform: translateY(0.15vw);
+}

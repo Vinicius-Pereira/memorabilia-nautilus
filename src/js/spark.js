@@ -20,7 +20,6 @@ $(function() {
     return this.each( function(k,v) {
       
       var $this = $(v).css("position","relative");
-      console.log($this.outerWidth());
       var settings = $.extend({
         width: $this.outerWidth() * 1.1,
         height: $this.outerHeight() * 1.1,

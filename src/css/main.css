@@ -8,21 +8,83 @@
     src:url("../fonts/BAHNSCHRIFT.TTF");
 }
 
+@font-face {
+    font-family: "BAHNSCHRIFT Light";
+    font-style: normal;
+    font-weight: lighter;
+    font-stretch: condensed;
+    src:url("../fonts/BAHNSCHRIFT.TTF");
+}
+
 html {
     background-image: url("../images/the\ end\ of\ nautilus.png");
     height: 100%;
+    font-family: "BAHNSCHRIFT";
+    user-select: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 99vh;
+}
+
+main {
+    flex: 1;
 }
 
 footer {
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4vw;
-    font-size: 1vw;
+    min-height: 2vw;
 }
 
-#credits-dialog {
+#logo-credits {
     width: 30vw;
+}
+#credits-dialog {
+    background-image: url("../images/bg-texture.png");
+    background-size: cover;
+    /* background-color: #a1a3a8; */
+    border: .2vw solid #202020;
+    font-size: 1.45vw;
+    color: #FFFFFF;
+    width: 60vw;
+    height: 40vw;
+    text-align: center;
+    font-family: 'BAHNSCHRIFT Light';
+}
+
+#credits-dialog p {
+    margin: 0;
+}
+
+#credits-dialog a {
+    text-decoration: none;
+    color: #fdca61;
+}
+
+#credits-dialog h2{
+    color: #e54545;
+    margin-top: 1vw;
+    margin-bottom: .7vw;
+}
+
+#credits-dialog h3{
+    color: #e54545;
+    margin-bottom: .5vw;
+}
+
+#credits-dialog ul {
+    text-align: center;
+    padding-left: .3vw;
+    list-style-type: none;
+    margin: 0;
+}
+
+#credits-dialog ul li {
+    margin: 0;
 }
 
 #container-logo {
@@ -119,20 +181,12 @@ footer {
     width: 20vw;
 }
 
-#number {
-    color: yellow;
-    position: absolute;
-    top: 1vw;
-    left: 1.5vw;
-    font-size: 2.3vw;
-}
-
 #artist {
-    color: yellow;
+    color: #FFFFFF;
     position: absolute;
     top: 1vw;
-    left: 12.6vw;
-    font-size: 1.1vw;
+    left: 13vw;
+    font-size: 1vw;
     text-decoration: none;
 }
 

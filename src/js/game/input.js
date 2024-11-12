@@ -43,7 +43,7 @@ function loadCards() {
     return [{
         url: basePath + "carta_placeholder.png",
         artista: ["@soivin.png", "https://www.youtube.com/@Soivin"],
-        atributos: ["99", "99", "99"]
+        atributos: ["30", "40", "50"]
     }, 
     {
         url: basePath + "carta_placeholder.png",
@@ -53,7 +53,7 @@ function loadCards() {
     {
         url: basePath + "carta_placeholder.png",
         artista: ["@soivin.png", "https://www.youtube.com/@Soivin"],
-        atributos: ["99", "99", "99"]
+        atributos: ["12", "25", "52"]
     }]
 }
 

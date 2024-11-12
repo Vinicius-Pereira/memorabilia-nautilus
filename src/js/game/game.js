@@ -18,10 +18,18 @@ function battle(event) {
     var index = event.target.id.charAt(event.target.id.length - 1);
     var valor = cartasJogador[indexAtual].atributos[index-1];
     var valorIA = botIA(index-1);
+
     if(valor > valorIA) {
+        document.querySelector("#card-1 #attribute-number-"+index).style.color = "#40cc54";
+        document.querySelector("#card-2 #attribute-number-"+index).style.color = "#cc4040";
         jogadorTags.score.text(++contVitoriaJogador);
     } else if(valor < valorIA) {
+        document.querySelector("#card-1 #attribute-number-"+index).style.color = "#cc4040";
+        document.querySelector("#card-2 #attribute-number-"+index).style.color = "#40cc54";
         IATags.score.text(++contVitoriaIA);
+    } else {
+        document.querySelector("#card-1 #attribute-number-"+index).style.color = "#cc4040";
+        document.querySelector("#card-2 #attribute-number-"+index).style.color = "#cc4040";
     }
     document.getElementById("next-round").disabled = false;
 
@@ -42,15 +50,17 @@ function battle(event) {
 }
 
 function proximaRodada() {
-    if(indexAtual < cartasJogador.length) {
-        montaCarta(jogadorTags, cartasJogador[indexAtual]);
-        montaCarta(IATags, cartasIA[indexAtual]);
-    }
-    document.getElementById("next-round").disabled = true;
-    document.getElementById("get-card").disabled = false;
     virarCarta(document.getElementById("card-1"));
     virarCarta(document.getElementById("card-2"));
-    toogleButton();
+    setTimeout(function(){
+        if(indexAtual < cartasJogador.length) {
+            montaCarta(jogadorTags, cartasJogador[indexAtual]);
+            montaCarta(IATags, cartasIA[indexAtual]);
+        }
+        document.getElementById("next-round").disabled = true;
+        document.getElementById("get-card").disabled = false;
+        toogleButton();
+    }, 1000);
 }
 
 function virarCarta(element) {
@@ -61,6 +71,12 @@ function virarCarta(element) {
     } else {
         element.style.transform = "none";
         cartasVerso[index-1] = !cartasVerso[index-1];
+        document.querySelector("#card-1 #attribute-number-1").style.color = "#000000";
+        document.querySelector("#card-1 #attribute-number-2").style.color = "#000000";
+        document.querySelector("#card-1 #attribute-number-3").style.color = "#000000";
+        document.querySelector("#card-2 #attribute-number-1").style.color = "#000000";
+        document.querySelector("#card-2 #attribute-number-2").style.color = "#000000";
+        document.querySelector("#card-2 #attribute-number-3").style.color = "#000000";
     }
 }
 

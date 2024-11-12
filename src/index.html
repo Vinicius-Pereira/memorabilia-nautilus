@@ -10,94 +10,39 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/switch.css">
     <link rel="stylesheet" href="./css/icon.css">
-    Memorabilia Nautilus
+    <link rel="stylesheet" href="./css/buttons.css">
 </head>
 
 <body>
-    <div id="container-logo">
-        <div>
-            <img id="logo" src="./images/logo_placeholder.png" alt="">
-        </div>
-    </div>
-    <div id="container-game">
-        <div id="card-1" class="card">
-            <div class="card-front">
-                <img id="card-model-1" class="card-model" src="./images/cards/carta trunfo nautilus.png"
-                    alt="Carta Placeholder">
-                <div id="card-top" class="card-info">
-                    <a href="" target="_blank" id="artist">@artista</a>
-                </div>
-                <div id="card-bottom">
-                    <div id="container-technical-glitter">
-                        <div id="button-attribute-1">
-                            <img id="icon-1" class="icon-attribute" src="./images/cards/icon_lacracao.png" alt="">
-                            <span id="attribute-number-1">99</span>
-                        </div>
-                    </div>
-                    <div id="button-attribute-2">
-                        <img id="icon-2" class="icon-attribute" src="./images/cards/icon_nerdolagem.png" alt="">
-                        <img id="icon-2-brain" class="icon-attribute" src="./images/cards/icon_nerdolagem_brain.png"
-                            alt="">
-                        <span id="attribute-number-2">99</span>
-                    </div>
-                    <div id="button-attribute-3">
-                        <img id="icon-3" class="icon-attribute" src="./images/cards/icon_aura.png" alt="">
-                        <span id="attribute-number-3">99</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card-back">
-                <img class="card-model" src="./images/cards/carta_verso.png" alt="Verso Memorabilia">
-            </div>
-        </div>
-        <div id="container-middle">
-            <div id="container-score">
-                <h3>Pontuação Atual</h3>
-                <span>Jogador </span>
-                <span id="score-player">0</span>
-                <span>X</span>
-                <span id="score-IA">0</span>
-                <span> Bot</span>
-                <h3 id="result"></h3>
-            </div>
-            <div id="container-options">
-                <button id="get-card" class="menu-buttons">
-                    Sortear Carta
-                </button>
-                <button id="next-round" class="menu-buttons">
-                    Próxima Rodada
-                </button>
-                <button id="new-game" class="menu-buttons">
-                    Novo Jogo
-                </button>
-                <label for="dificuldade" class="switch" aria-label="Toggle Filter">
-                    <input type="checkbox" id="dificuldade" />
-                    <span>Clássico</span>
-                    <span>Difícil</span>
-                </label>
-            </div>
-        </div>
+    <main>
 
+        <div id="container-logo">
+            <div>
+                <img id="logo" src="./images/logo_placeholder.png" alt="">
+            </div>
+        </div>
         <div id="container-game">
-            <div id="card-2" class="card">
+            <div id="card-1" class="card">
                 <div class="card-front">
-                    <img id="card-model-2" class="card-model" src="./images/cards/carta trunfo nautilus.png"
-                        alt="Carta Placeholder">
+                    <img id="card-model-1" class="card-model" src="./images/cards/carta trunfo nautilus.png"
+                    alt="Carta Placeholder">
                     <div id="card-top" class="card-info">
                         <a href="" target="_blank" id="artist">@artista</a>
                     </div>
                     <div id="card-bottom">
-                        <div id="IA-button-attribute-1">
-                            <img id="icon-1" class="icon-attribute" src="./images/cards/icon_lacracao.png" alt="">
-                            <span id="attribute-number-1">99</span>
+                        <div id="container-technical-glitter">
+                            <div id="button-attribute-1">
+                                <img id="icon-1" class="icon-attribute" src="./images/cards/icon_lacracao.png" alt="">
+                                <span id="attribute-number-1">99</span>
+                            </div>
                         </div>
-                        <div id="IA-button-attribute-2">
+                        <div id="button-attribute-2">
                             <img id="icon-2" class="icon-attribute" src="./images/cards/icon_nerdolagem.png" alt="">
                             <img id="icon-2-brain" class="icon-attribute" src="./images/cards/icon_nerdolagem_brain.png"
-                                alt="">
+                            alt="">
                             <span id="attribute-number-2">99</span>
                         </div>
-                        <div id="IA-button-attribute-3">
+                        <div id="button-attribute-3">
                             <img id="icon-3" class="icon-attribute" src="./images/cards/icon_aura.png" alt="">
                             <span id="attribute-number-3">99</span>
                         </div>
@@ -107,25 +52,124 @@
                     <img class="card-model" src="./images/cards/carta_verso.png" alt="Verso Memorabilia">
                 </div>
             </div>
-        </div>
-</body>
-
-<!-- <footer>
-    <button id="button-credits">Créditos</button>
-</footer> -->
+            <div id="container-middle">
+                <div id="container-score">
+                    <h3>Pontuação Atual</h3>
+                    <span>Jogador </span>
+                    <span id="score-player">0</span>
+                    <span>X</span>
+                    <span id="score-IA">0</span>
+                    <span> Bot</span>
+                    <h3 id="result"></h3>
+                </div>
+                <div id="container-options">
+                    <button id="get-card" class="menu-buttons button">
+                        Sortear Carta
+                    </button>
+                    <button id="next-round" class="menu-buttons button">
+                        Próxima Rodada
+                    </button>
+                    <button id="new-game" class="menu-buttons button">
+                        Novo Jogo
+                    </button>
+                    <label for="dificuldade" class="switch" aria-label="Toggle Filter">
+                        <input type="checkbox" id="dificuldade" />
+                        <span>Clássico</span>
+                        <span>Difícil</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div id="container-game">
+                <div id="card-2" class="card">
+                    <div class="card-front">
+                        <img id="card-model-2" class="card-model" src="./images/cards/carta trunfo nautilus.png"
+                        alt="Carta Placeholder">
+                        <div id="card-top" class="card-info">
+                            <a href="" target="_blank" id="artist">@artista</a>
+                        </div>
+                        <div id="card-bottom">
+                            <div id="IA-button-attribute-1">
+                                <img id="icon-1" class="icon-attribute" src="./images/cards/icon_lacracao.png" alt="">
+                                <span id="attribute-number-1">99</span>
+                            </div>
+                            <div id="IA-button-attribute-2">
+                                <img id="icon-2" class="icon-attribute" src="./images/cards/icon_nerdolagem.png" alt="">
+                                <img id="icon-2-brain" class="icon-attribute" src="./images/cards/icon_nerdolagem_brain.png"
+                                alt="">
+                                <span id="attribute-number-2">99</span>
+                            </div>
+                            <div id="IA-button-attribute-3">
+                                <img id="icon-3" class="icon-attribute" src="./images/cards/icon_aura.png" alt="">
+                                <span id="attribute-number-3">99</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <img class="card-model" src="./images/cards/carta_verso.png" alt="Verso Memorabilia">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <button id="button-credits">Sobre</button>
+        </footer>
+    </body>
+    
+    
 
 <dialog id="credits-dialog">
-    <button id="close-credits">Fechar</button>
+    <button id="close-credits" class="button">Jogar</button><br>
+    <img id="logo-credits" src="./images/logo_placeholder.png" alt="">
+    <h2>Sobre</h2>
+    <p>Memorabília são fatos e coisas dignas de memória, e aqui Memorabilia é um jogo de cartas que guarda as memórias
+        da Comunidade Nautilus, estas eternizadas pelos artistas que fazem parte da comunidade, caso no futuro ocorra o
+        temido
+        <span>FIM DO NAUTILUS</span>.
+    </p>
+    <p>
+        Não só um jogo de cartas feito para uma Não GameJam, Memorabília é um projeto que será mantido no futuro com
+        atualizações de novas memórias, sempre que a comunidade e seus artistas assim desejarem. Caso você queira contribuir
+        com o projeto através de uma cartinha, entre em contato com um dos Organizadores do projeto, listados logo abaixo.
+    </p>
+    <h2>Como Jogar</h2>
+    <p>
+        Utilize os botões no centro da tela para sacar novas cartas, ir à próxima rodada e iniciar um novo jogo.
+    </p>
+    <p>
+        Para batalhar contra o oponente clique em um dos 3 atributos de sua carta, caso seu valor seja maior que o da carta
+        do inimigo, você vence a rodada.
+    </p>
+    <p>
+        Quem obtiver o maior número de pontos ao fim dos baralhos vence!
+    </p>
     <h2>Créditos</h2>
-    <h3>Programação</h3>
-    <p>Vinicius1942 <a href="https://bsky.app/profile/viniciusp.bsky.social" target="_blank"
-            rel="noopener noreferrer">Bluesky</a></p>
+    <h3>Organização</h3>
+    <ul>
+        <li>Saito <a href="https://www.instagram.com/saito.art/" target="_blank">Instagram</a></li>
+        <li>Túlio Lobo <a href="https://bsky.app/profile/tuliolobo.com.br" target="_blank">Bluesky</a></li>
+        <li>Vinicius S Pereira <a href="https://bsky.app/profile/viniciusp.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a></li>
+    </ul>
     <h3>Direção de Arte</h3>
-    <p>Túlio Lobo <a href="https://bsky.app/profile/tuliolobo.com.br" target="_blank"
-            rel="noopener noreferrer">Bluesky</a></p>
-    <p>Saito <a href="https://www.instagram.com/saito.art/" target="_blank" rel="noopener noreferrer">Bluesky</a></p>
-    <h3>Artistas de Cartas</h3>
-    <p>Kör Rodrigues <a href="https://cara.app/korrodrigues" target="_blank" rel="noopener noreferrer">Cara</a></p>
+    <ul>
+        <li>Saito <a href="https://www.instagram.com/saito.art/" target="_blank">Instagram</a></li>
+    </ul>
+    <h3>Artistas</h3>
+    <ul>
+        <li>Saito <a href="https://www.instagram.com/saito.art/" target="_blank">Instagram</a></li>
+        <li>Kör Rodrigues <a href="https://cara.app/korrodrigues" target="_blank">Cara</a></li>
+    </ul>
+    <h3>Programação</h3>
+    <ul>
+        <li>Vinicius S Pereira <a href="https://bsky.app/profile/viniciusp.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a></li>
+    </ul>
+    <h3>Agradecimentos</h3>
+    <ul>
+        <li>Aos Nautiboys Bruno, Henrique, Lucas, Nelson e Ricardo.</li>
+        <li>A toda comunidade Nautilus.</li>
+    </ul>
 </dialog>
+
+
 
 </html>
