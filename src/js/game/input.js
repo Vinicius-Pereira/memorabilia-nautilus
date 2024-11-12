@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function loadCards() {
-    let basePath = "./images/cards/";
+    let basePath = "./src/images/cards/";
     return [
     // {
     //     url: basePath + "1.png",
