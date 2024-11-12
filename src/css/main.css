@@ -27,7 +27,8 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 99vh;
+    min-height: 100vh;
+    margin: 0;
 }
 
 main {
@@ -38,7 +39,27 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 2vw;
+    min-height: 4vw;
+    width: 100%;
+    background-color: #202020;
+    border-top: .1vw solid #a0a2a8;
+}
+
+#button-credits {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    font-size: 1.5vw;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#button-credits:hover {
+    color: #327fdd;
 }
 
 #logo-credits {
@@ -166,7 +187,6 @@ footer {
     padding-top: .5vw;
     padding-bottom: .5vw;
     background-color: #a0a2a8;
-    /* background-image: url("../images/bg1-gray.png"); */
     background-size: cover;
     border-bottom: 0.2vw solid #FFFFFF;
 }
