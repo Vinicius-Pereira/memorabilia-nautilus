@@ -21,17 +21,17 @@ function battle(event) {
 
     indexAtual++;
     resultado.textContent = (cartasJogador.length - indexAtual) + " cartas restantes";
-    if(valor > valorIA) {
+    if(valor > valorIA[0]) {
         document.querySelector("#card-1 #attribute-number-"+index).style.color = "#40cc54";
-        document.querySelector("#card-2 #attribute-number-"+index).style.color = "#cc4040";
+        document.querySelector("#card-2 #attribute-number-"+valorIA[1]).style.color = "#cc4040";
         jogadorTags.score.text(++contVitoriaJogador);
-    } else if(valor < valorIA) {
+    } else if(valor < valorIA[0]) {
         document.querySelector("#card-1 #attribute-number-"+index).style.color = "#cc4040";
-        document.querySelector("#card-2 #attribute-number-"+index).style.color = "#40cc54";
+        document.querySelector("#card-2 #attribute-number-"+valorIA[1]).style.color = "#40cc54";
         IATags.score.text(++contVitoriaIA);
     } else {
         document.querySelector("#card-1 #attribute-number-"+index).style.color = "#cc4040";
-        document.querySelector("#card-2 #attribute-number-"+index).style.color = "#cc4040";
+        document.querySelector("#card-2 #attribute-number-"+valorIA[1]).style.color = "#cc4040";
     }
     document.getElementById("next-round").disabled = false;
     jogadorTags.atributo1.attr("disabled", true);
@@ -102,9 +102,9 @@ function botIA(index) {
     var atributos = cartasIA[indexAtual].atributos;
     if(dificuldade.checked) {
         let indexRandom = Math.floor(Math.random() * 3);
-        return atributos[indexRandom];
+        return [atributos[indexRandom], indexRandom+1];
     } else {
-        return atributos[index];
+        return [atributos[index], index+1];
     }
 }
 
