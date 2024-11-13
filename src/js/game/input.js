@@ -48,11 +48,11 @@ document.addEventListener("DOMContentLoaded", function() {
 function loadCards() {
     let basePath = "./src/images/cards/";
     return [
-    // {
-    //     url: basePath + "1.png",
-    //     artista: ["soivin", "https://www.youtube.com/@Soivin"],
-    //     atributos: ["33", "15", "80"]
-    // }, 
+    {
+        url: basePath + "1.png",
+        artista: ["Kör Rodrigues", "https://cara.app/korrodrigues"],
+        atributos: ["33", "15", "80"]
+    }, 
     {
         url: basePath + "2.png",
         artista: ["soivin", "https://www.youtube.com/@Soivin"],
@@ -111,12 +111,17 @@ function loadCards() {
     {
         url: basePath + "13.png",
         artista: ["Kitilto", "https://www.instagram.com/kitilto/"],
-        atributos: ["10", "03", "99"]
+        atributos: ["10", "03", "90"]
     },
     {
         url: basePath + "14.png",
         artista: ["Didas", "https://bsky.app/profile/didigameboy.bsky.social"],
         atributos: ["43", "67", "54"]
+    },
+    {
+        url: basePath + "15.png",
+        artista: ["Saito", "https://www.instagram.com/saito.art/"],
+        atributos: ["80", "30", "99"]
     }]
 }
 
