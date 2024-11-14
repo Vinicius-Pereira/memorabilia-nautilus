@@ -7,9 +7,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Carrega e Embaralha Todas as Cartas
     const firstTime = localStorage.getItem("firstTime");
     if(!firstTime) {
-        document.getElementById("credits-dialog").showModal();
         localStorage.setItem("firstTime", true);
+        document.getElementById("credits-dialog").showModal();
     }
+    document.getElementById("credits-dialog").showModal();
 
     resultado = document.getElementById("result");
     dificuldade = document.getElementById("dificuldade");
