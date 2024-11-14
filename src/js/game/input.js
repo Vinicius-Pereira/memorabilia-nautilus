@@ -61,7 +61,7 @@ function loadCards() {
     {
         url: basePath + "3.png",
         artista: ["Valkyray", "https://www.instagram.com/valkyrieray/"],
-        atributos: ["10", "75", "55"]
+        atributos: ["10", "82", "55"]
     },
     {
         url: basePath + "4.png",
@@ -101,7 +101,7 @@ function loadCards() {
     {
         url: basePath + "11.png",
         artista: ["Kör Rodrigues", "https://cara.app/korrodrigues"],
-        atributos: ["13", "22", "83"]
+        atributos: ["13", "30", "83"]
     },
     {
         url: basePath + "12.png",
@@ -121,7 +121,67 @@ function loadCards() {
     {
         url: basePath + "15.png",
         artista: ["Saito", "https://www.instagram.com/saito.art/"],
-        atributos: ["80", "30", "99"]
+        atributos: ["22", "36", "99"]
+    },
+    {
+        url: basePath + "16.png",
+        artista: ["Paulo Maciel", "https://www.instagram.com/ricksfantasyworlds/"],
+        atributos: ["17", "73", "67"]
+    },
+    {
+        url: basePath + "17.png",
+        artista: ["Max do Pix", "https://bsky.app/profile/maxarts.bsky.social"],
+        atributos: ["64", "37", "80"]
+    },
+    {
+        url: basePath + "18.png",
+        artista: ["Didas", "https://bsky.app/profile/didigameboy.bsky.social"],
+        atributos: ["12", "98", "60"]
+    },
+    {
+        url: basePath + "19.png",
+        artista: ["PiiCO", "https://www.instagram.com/felyp_v"],
+        atributos: ["48", "07", "89"]
+    },
+    {
+        url: basePath + "20.png",
+        artista: ["Taubateh", "https://www.instagram.com/andinhojacinto/"],
+        atributos: ["97", "59", "47"]
+    },
+    {
+        url: basePath + "21.png",
+        artista: ["Carina", "https://www.instagram.com/ca__artwork/"],
+        atributos: ["15", "66", "95"]
+    },
+    {
+        url: basePath + "22.png",
+        artista: ["PiiCO", "https://www.instagram.com/felyp_v"],
+        atributos: ["51", "21", "79"]
+    },
+    {
+        url: basePath + "23.png",
+        artista: ["PiiCO", "https://www.instagram.com/felyp_v"],
+        atributos: ["99", "16", "52"]
+    },
+    {
+        url: basePath + "24.png",
+        artista: ["Max do Pix", "https://bsky.app/profile/maxarts.bsky.social"],
+        atributos: ["03", "85", "63"]
+    },
+    {
+        url: basePath + "25.png",
+        artista: ["Túlio Lobo", "https://bsky.app/profile/tuliolobo.com.br"],
+        atributos: ["27", "99", "51"]
+    },
+    {
+        url: basePath + "26.png",
+        artista: ["Kaue", "https://bsky.app/profile/red223.bsky.social"],
+        atributos: ["99", "99", "99"]
+    },
+    {
+        url: basePath + "27.png",
+        artista: ["Saito", "https://www.instagram.com/saito.art/"],
+        atributos: ["80", "09", "77"]
     }]
 }
 
